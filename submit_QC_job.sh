@@ -33,11 +33,7 @@ conda activate project
 
 ## $VAR is the raw gene expression CSV filename passed in from bash_loop_submitter.sh
 
-# STEP 1: compute QC metrics and generate QC visualizations
 python3 NEW_get_QC_plots.py $VAR
-
-# STEP 2: apply sequential cell filtration using QC stats output from STEP 1
-python3 Data_filtering_run_this.py QC_stats_output_${VAR%.csv}.csv
 
 
 # echo job info on joblog:
